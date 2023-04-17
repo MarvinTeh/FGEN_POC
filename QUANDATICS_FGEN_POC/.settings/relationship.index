@@ -36,6 +36,10 @@
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_1r4c4NzdEe24L7dTAqU3HQ - SAP_PURCHASE_ORDER",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
     "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_CHECKRELEASE_FPH_FPRC",
     "version" : "Latest",
     "type" : "schema"
@@ -57,6 +61,10 @@
     "type" : "schema"
   }, {
     "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_TRANSACTIONS_FPH_FPRC",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_C8-DANzfEe24L7dTAqU3HQ - SAP_PO_HISTORY_GR_IR",
     "version" : "Latest",
     "type" : "schema"
   } ]
