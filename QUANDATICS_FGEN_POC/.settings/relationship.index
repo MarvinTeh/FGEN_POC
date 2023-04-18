@@ -40,10 +40,6 @@
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_7EhR0NbEEe2jnPIM1QAqSQ - PROCUREMENT_TRANSACTIONS",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_CHECKRELEASE_FPH_FPRC",
     "version" : "Latest",
     "type" : "schema"
