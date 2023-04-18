@@ -498,27 +498,15 @@
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_CHECKRELEASE_FPH_FPRC",
+    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - CHECKRELEASE_FPIP_FUI",
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_CHECKVREVIEW_FPH_FPRC",
+    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - DOCUMENTPARKING_FPIP_FUI",
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_DOCUMENTPARKING_FPH_FPRC",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_IBS_CHECKRELEASE_FPH_FPRC",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_ONLINEPAYMENT_FPH_FPRC",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - PO_TRANSACTIONS_FPH_FPRC",
+    "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ - TRANSACTION_FPIP_FUI",
     "version" : "Latest",
     "type" : "schema"
   }, {
