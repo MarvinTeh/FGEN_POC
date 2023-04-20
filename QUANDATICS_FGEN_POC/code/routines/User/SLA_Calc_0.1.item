@@ -40,7 +40,7 @@ public class SLA_Calc {
         Date Start_day= TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",Start));
         Date End_day=TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",End));
         
-        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(Start_day,End_day,"DD")));
+        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(End_day,Start_day,"DD")));
         System.out.println(Counter);
         
         for(int i=0;i<Counter;i++)
