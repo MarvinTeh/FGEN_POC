@@ -47,7 +47,7 @@ public class SLA_Calc {
         for(int i=0;i<=Counter;i++)
 		{
         	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-        	if(i>0&&(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+        	if((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{
         		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
         		continue;
@@ -128,7 +128,7 @@ public class SLA_Calc {
         for(int i=0;i<=Counter;i++)
 		{
         	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-        	if(i>0&&(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+        	if((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{
         		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
         		continue;
@@ -209,7 +209,7 @@ public class SLA_Calc {
         for(int i=0;i<=Counter;i++)
 		{
         	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-        	if(i>0&&(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+        	if((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{
         		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
         		continue;
@@ -290,7 +290,7 @@ public class SLA_Calc {
         for(int i=0;i<=Counter;i++)
 		{
         	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-        	if(i>0&&(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+        	if((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{
         		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
         		continue;
@@ -371,7 +371,7 @@ public class SLA_Calc {
         for(int i=0;i<=Counter;i++)
 		{
         	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-        	if(i>0&&(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+        	if((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{
         		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
         		continue;
@@ -452,7 +452,7 @@ public class SLA_Calc {
         for(int i=0;i<=Counter;i++)
     	{
         	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-        	if(i>=0&&((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+        	if(((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{
         		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
         		continue;
@@ -534,7 +534,7 @@ public static Double IBSRecv_Calc( Date Approval, Date IBS_Receiving,Date Parkin
     for(int i=0;i<=Counter;i++)
 	{
     	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-    	if(i>=0&&((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+    	if(((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
     	{
     		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
     		continue;
@@ -615,7 +615,7 @@ public static Double Parking_Calc( Date IBS_Receiving, Date Parking,Date Posting
     for(int i=0;i<=Counter;i++)
 	{
     	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-    	if(i>=0&&((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+    	if(((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
     	{
     		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
     		continue;
@@ -696,7 +696,7 @@ public static Double Posting_Calc( Date Parking, Date Posting,Date paymentrun, S
     for(int i=0;i<=Counter;i++)
 	{
     	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-    	if(i>=0&&((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+    	if(((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
     	{
     		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
     		continue;
@@ -777,7 +777,7 @@ public static Double paymentRun_Calc( Date Posting, Date paymentrun,Date CV_Rele
     for(int i=0;i<=Counter;i++)
 	{
     	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-    	if(i>=0&&((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+    	if(((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
     	{
     		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
     		continue;
@@ -858,7 +858,7 @@ public static Double  CV_Calc( Date paymentrun, Date CV_Release,Date PAymentRele
     for(int i=0;i<=Counter;i++)
 	{
     	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-    	if(i>=0&&((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+    	if(((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
     	{
     		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
     		continue;
@@ -939,7 +939,7 @@ public static Double  Release_Calc( Date CV_Release, Date PAymentRelease, String
     for(int i=0;i<=Counter;i++)
 	{
     	System.out.println(TalendDate.formatDate("EEE", CurrDate));
-    	if(i>=0&&((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+    	if(((String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sat"))||(String.valueOf(TalendDate.formatDate("EEE", CurrDate)).equals("Sun"))||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
     	{
     		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
     		continue;
