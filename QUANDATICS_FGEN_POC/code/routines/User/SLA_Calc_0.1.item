@@ -36,7 +36,7 @@ public class SLA_Calc {
     public static Double PR_Approval_Calc(Date PRCreation, Date PRApproval, Date POCreation, String Holidays) {
         Date Start= PRCreation;
         Date End= PRApproval==null?POCreation:PRApproval;
-        Double TotalSLA;
+        Double TotalSLA=0.0;
         Date Start_day= TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",Start));
         Date End_day=TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",End));
         
