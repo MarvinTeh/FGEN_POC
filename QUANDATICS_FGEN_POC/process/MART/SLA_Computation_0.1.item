@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ry4cdSvM1YA+YeAAQTbwaOz7mVPZKmmB9OrHT2kk"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:6qX3bbQoTSzHhRmApCAzDr0ha6wdeChwUC8ZG3AK"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:EXBXZtgD/6X788b953gLZh65IM5v9hmDoNzDh9kB"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Ysk4mn/qGrKGSgaUmzmXi79odNfuCxLCu8HCONBg"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -118,7 +118,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;/Users/hsienher/Documents/Stage/Fgen/Data/ProcumentTransactions.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:jyJaoAvR3std4Da9hYg+27sHRX2iGX1r5F/v+DXD"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:2O4psaD8TCTiVa8ijEh72tPi5dovHOzqBM0m+lms"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="&quot;Sheet1&quot;"/>
@@ -1754,19 +1754,19 @@
         <mapperTableEntries expression="row1.TRANSACTIONTYPE" name="TRANSACTIONTYPE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.TOTALPHP" name="TOTALPHP" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.PAYMENTMODE" name="PAYMENTMODE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PR_CREATION==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PR_CREATION) " name="PR_CREATION" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PR_APPROVAL==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PR_APPROVAL) " name="PR_APPROVAL" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PO_CREATION==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PO_CREATION) " name="PO_CREATION" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PO_APPROVAL==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PO_APPROVAL) " name="PO_APPROVAL" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.GR_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.GR_DATE) " name="GR_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.INVOICESUBMISSIONT_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.INVOICESUBMISSIONT_DATE) " name="INVOICESUBMISSIONT_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.APPROVAL_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.APPROVAL_DATE) " name="APPROVAL_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.IBS_RECEIVING_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.IBS_RECEIVING_DATE) " name="IBS_RECEIVING_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PARKING_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PARKING_DATE) " name="PARKING_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.POSTING_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.POSTING_DATE) " name="POSTING_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PAYMENTRUN_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PAYMENTRUN_DATE) " name="PAYMENTRUN_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.CHECKVOUCHER_REVIEW_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.CHECKVOUCHER_REVIEW_DATE) " name="CHECKVOUCHER_REVIEW_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PAYMENT_RELEASE_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PAYMENT_RELEASE_DATE) " name="PAYMENT_RELEASE_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PR_CREATION==null||row1.PR_CREATION.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PR_CREATION) " name="PR_CREATION" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PR_APPROVAL==null||row1.PR_APPROVAL.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PR_APPROVAL) " name="PR_APPROVAL" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PO_CREATION==null||row1.PO_CREATION.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PO_CREATION) " name="PO_CREATION" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PO_APPROVAL==null||row1.PO_APPROVAL.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PO_APPROVAL) " name="PO_APPROVAL" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.GR_DATE==null||row1.GR_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.GR_DATE) " name="GR_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.INVOICESUBMISSIONT_DATE==null||row1.INVOICESUBMISSIONT_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.INVOICESUBMISSIONT_DATE) " name="INVOICESUBMISSIONT_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.APPROVAL_DATE==null||row1.APPROVAL_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.APPROVAL_DATE) " name="APPROVAL_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.IBS_RECEIVING_DATE==null||row1.IBS_RECEIVING_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.IBS_RECEIVING_DATE) " name="IBS_RECEIVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PARKING_DATE==null||row1.PARKING_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PARKING_DATE) " name="PARKING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.POSTING_DATE==null||row1.POSTING_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.POSTING_DATE) " name="POSTING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PAYMENTRUN_DATE==null||row1.PAYMENTRUN_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PAYMENTRUN_DATE) " name="PAYMENTRUN_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.CHECKVOUCHER_REVIEW_DATE==null||row1.CHECKVOUCHER_REVIEW_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.CHECKVOUCHER_REVIEW_DATE) " name="CHECKVOUCHER_REVIEW_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PAYMENT_RELEASE_DATE==null||row1.PAYMENT_RELEASE_DATE.equals(&quot;&quot;)?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PAYMENT_RELEASE_DATE) " name="PAYMENT_RELEASE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row1.CHECKRELEASING_STATUS" name="CHECKRELEASING_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.CHECKRELEASING_SLA_BREACHED" name="CHECKRELEASING_SLA_BREACHED" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" name="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" nullable="true" type="id_String"/>
@@ -2089,13 +2089,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c40aeca-61a4-42af-8620-6e99bf825036"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UPgFOunOpFA3ibDUVojs2wiGi1watJSH5IZdSZfWZkGL2pU4A2z94eta5JPSfNSA7V6TBY/TLGx1&#13;
-1R0yotDsjQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bfdd70b6-ec31-457d-b0b5-e8f26c2a5767"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BuBQrdt2S6z4HOuFa73liICscnJu/pM0KOWYgS+vrSMItdPYZ6X1Ng1hiMCeHz2iYD6HJLRFYpcc&#13;
-13lpMoXZgA==</DigestValue></Reference></SignedInfo><SignatureValue>PL70ZDA/I68WVPHn6wjswk9F5YES+2a8KFbDvJpe2uMyWl0PcpURJdUkAXzSkBF90JPEXXzj05iw&#13;
-9AnD+T3FQq1BI9zEkwPgHCAwfe0meUhdlQjDm81aRfic6lgPrS09I8tFKaST1sgK2GlCHF+o/FyW&#13;
-mo2/GoESv+gY3w3zNmb283AVB+lwhm7GzQ8ygtTtf88LAnFakRRMmiV++3R+lggOkBNLEcxBuWaz&#13;
-vYu60XmEcSPS4ZhrBqeYS8eWnJdW8eUGcPfnJc86l+3o6ybZ1jzMPZVj2Rb/qwVRcNVCxvWklHeZ&#13;
-7IWsqVVOyljii5PoRm4jIOUBImSxUk7EGw60lw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4078db63-b421-4266-9f17-7cb6c2902146"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RL9BNGkipjxKb5WPall3ckgWGQ70cKg2WavgD7ek2GHY8XJ9gQsyDk7DooJFMYAl5DmgwTeHGyWH&#13;
+z6pf9CivJw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_aa109a89-3f62-4a3d-b9cf-d254e10d473f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OqNwt0RH/kJAl99UDvd6GbS0E+kTG10j9ljpez62sDfNy3cmLusI4YnTmUuwGnsIJJSK/a0rpBHz&#13;
+SW3GGtg1aA==</DigestValue></Reference></SignedInfo><SignatureValue>bo4O8Uaqwo9HETLtf3KAmM/JY4HF72q68bquvZXj8Z/j87UJQrqAZn4Lf/TFUEpq/BC+EZHsjBbQ&#13;
+xzQ4rFumfAKrrLvC9ESGQHTwsgO8RXcgnVvd3PohniJPKZ3SLr71nikzgCKz/IMSZZ0RyUpj0JmG&#13;
+7EBNkBJQm81JSWAxWxt4PNecE59f3SbmK2dishqsBr5PPMzaX+D6CAQBWmMQg0VEOuhIbFbPEnH4&#13;
+tqhGxgF6msbC6KOFeOvxoUDOBQgOrm+BaLAwhXWXKetngmUuzMXD3FXw72kmk7EEtZixzMqgUbZ1&#13;
+REHNIoVLikenH8O9LVs/1t9gcSDPZ0NN+5/xLA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2117,4 +2117,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bfdd70b6-ec31-457d-b0b5-e8f26c2a5767" Target="#_3c40aeca-61a4-42af-8620-6e99bf825036"><Timestamp>2023-04-20 05:06:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_aa109a89-3f62-4a3d-b9cf-d254e10d473f" Target="#_4078db63-b421-4266-9f17-7cb6c2902146"><Timestamp>2023-04-20 05:08:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
