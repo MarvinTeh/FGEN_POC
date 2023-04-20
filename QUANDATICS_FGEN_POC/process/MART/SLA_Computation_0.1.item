@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:TeA241MY/39IhTl7S8jK60skFo0TpnUT4IXvj9Ay"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:R32lMg1IN6L38LUPo3kWbCE9flyyhH+kEiifmDx9"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Fkyc5l/V/2niWA64d9pYCjMyg5HSA62xP5ktorFh"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:QqzO6omt6Za2VsXBZUuqJMAOp15vkudMyUtCf74H"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -957,19 +957,169 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_k1eQgN86Ee2Ka6I185CUyg-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="PO">
+      <column comment="" key="false" length="0" name="ID" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="InvoiceReceipt" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Company" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SAPDocumentNumber" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Source" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Non_PO_Type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Status" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="CurrentStep" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PR_Approval_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PO_Creation_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PO_Approval_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="GR_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Invoice_Request_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Request_Approval_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="IBS_Receiving_Hour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Parking_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Posting_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Payment_Run_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CheckVoucherReview_Hour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PaymentRelease_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SLA_Creation_Duration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SLA_Exceed_Creation_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SLA_IBS_Duration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SLA_Exceed_IBS_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SLA_Payment_Duration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SLA_Exceed_Payment_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata name="Non_PO">
+      <column comment="" key="false" length="0" name="ID" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="InvoiceReceipt" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Company" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SAPDocumentNumber" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Source" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Non_PO_Type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Status" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="CurrentStep" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PR_Approval_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PO_Creation_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PO_Approval_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="GR_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Invoice_Request_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Request_Approval_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="IBS_Receiving_Hour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Parking_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Posting_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Payment_Run_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CheckVoucherReview_Hour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PaymentRelease_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SLA_Exceed_Creation_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SLA_Exceed_IBS_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="SLA_Exceed_Payment_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="copyOfMerged.Source.equals(&quot;PO&quot;)" name="PO" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="copyOfMerged.ID " name="ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.InvoiceReceipt " name="InvoiceReceipt" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Company " name="Company" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.SAPDocumentNumber " name="SAPDocumentNumber" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Source " name="Source" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Non_PO_Type " name="Non_PO_Type" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Status " name="Status" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.CurrentStep " name="CurrentStep" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.PR_Approval_Day " name="PR_Approval_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.PO_Creation_Day " name="PO_Creation_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.PO_Approval_Day " name="PO_Approval_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.GR_Day " name="GR_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Invoice_Request_Hour " name="Invoice_Request_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Request_Approval_Hour " name="Request_Approval_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.IBS_Receiving_Hour " name="IBS_Receiving_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Doc_Parking_Hour " name="Doc_Parking_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Doc_Posting_Hour " name="Doc_Posting_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Payment_Run_Hour " name="Payment_Run_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.CheckVoucherReview_Hour " name="CheckVoucherReview_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.PaymentRelease_Hour " name="PaymentRelease_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="(copyOfMerged.Request_Approval_Hour==null?0.0:copyOfMerged.Request_Approval_Hour)+(copyOfMerged.IBS_Receiving_Hour==null?0.0:copyOfMerged.IBS_Receiving_Hour) " name="SLA_Creation_Duration" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_Creation_Flag " name="SLA_Exceed_Creation_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(copyOfMerged.Doc_Parking_Hour==null?0.0:copyOfMerged.Doc_Parking_Hour)+(copyOfMerged.Doc_Posting_Hour==null?0.0:copyOfMerged.Doc_Posting_Hour) " name="SLA_IBS_Duration" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_IBS_Flag " name="SLA_Exceed_IBS_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(copyOfMerged.CheckVoucherReview_Hour==null?0.0:copyOfMerged.CheckVoucherReview_Hour) " name="SLA_Payment_Duration" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_Payment_Flag " name="SLA_Exceed_Payment_Flag" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="copyOfMerged.Source.equals(&quot;Non-PO&quot;)" name="Non_PO" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="copyOfMerged.ID " name="ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.InvoiceReceipt " name="InvoiceReceipt" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Company " name="Company" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.SAPDocumentNumber " name="SAPDocumentNumber" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Source " name="Source" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Non_PO_Type " name="Non_PO_Type" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.Status " name="Status" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.CurrentStep " name="CurrentStep" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.PR_Approval_Day " name="PR_Approval_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.PO_Creation_Day " name="PO_Creation_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.PO_Approval_Day " name="PO_Approval_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.GR_Day " name="GR_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Invoice_Request_Hour " name="Invoice_Request_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Request_Approval_Hour " name="Request_Approval_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.IBS_Receiving_Hour " name="IBS_Receiving_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Doc_Parking_Hour " name="Doc_Parking_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Doc_Posting_Hour " name="Doc_Posting_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.Payment_Run_Hour " name="Payment_Run_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.CheckVoucherReview_Hour " name="CheckVoucherReview_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.PaymentRelease_Hour " name="PaymentRelease_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_Creation_Flag " name="SLA_Exceed_Creation_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_IBS_Flag " name="SLA_Exceed_IBS_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_Payment_Flag " name="SLA_Exceed_Payment_Flag" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="copyOfMerged" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="ID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="InvoiceReceipt" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Company" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SAPDocumentNumber" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Source" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Non_PO_Type" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Status" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CurrentStep" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PR_Approval_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PO_Creation_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PO_Approval_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="GR_Day" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Invoice_Request_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Request_Approval_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="IBS_Receiving_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Doc_Parking_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Doc_Posting_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Payment_Run_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="CheckVoucherReview_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PaymentRelease_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="SLA_Exceed_Creation_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SLA_Exceed_IBS_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SLA_Exceed_Payment_Flag" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -1011,9 +1161,15 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="PaymentRelease_Hour"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SLA_Creation_Duration"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SLA_Exceed_Creation_Flag"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SLA_IBS_Duration"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SLA_Exceed_IBS_Flag"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SLA_Payment_Duration"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SLA_Exceed_Payment_Flag"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -1021,7 +1177,7 @@
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="SLA_TRANSACTIONS" name="tLogRow_2">
+    <metadata connector="FLOW" name="tLogRow_1">
       <column comment="" key="false" length="0" name="ID" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="InvoiceReceipt" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="Company" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1042,8 +1198,11 @@
       <column comment="" key="false" length="0" name="Payment_Run_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CheckVoucherReview_Hour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="PaymentRelease_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SLA_Creation_Duration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_Creation_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SLA_IBS_Duration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_IBS_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SLA_Payment_Duration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_Payment_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1260,17 +1419,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ToCalc"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfMerged" lineStyle="0" metaname="copyOfMerged" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_2">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="IBS_Receiving_Hour"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CheckVoucherReview_Hour"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
+  <connection connectorName="FLOW" label="copyOfMerged" lineStyle="0" metaname="copyOfMerged" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfMerged"/>
+  </connection>
+  <connection connectorName="FLOW" label="PO" lineStyle="0" metaname="PO" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="PO"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1315,13 +1470,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cff2275f-5948-42f0-8b77-a981ed7760d5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RAbN9aMnfz3uuEYIWVADBBX3WvHHS49rDcvBMnP9ZYx68XcWZUNtzPhJOvKl2PhaRBmjuJVxZB7e&#13;
-dZztQRnA3g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8c187d5c-892d-44b5-b26d-c2821ac2cfce"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>O6TETbR8rldwUnOxaJlFSGUOo0pnRLP+IKA8wdHtBxy7Olf2ymEiTm+j72njzHHe3qjsTxvVHDLP&#13;
-QzO2JC/VmA==</DigestValue></Reference></SignedInfo><SignatureValue>QEZArTiWYTudd0uBrDdEKvn92Mt0kDkcMXuBEmpD6sLxi1iZle/dw8hKNluL1+dwjzs/ln/DRtu+&#13;
-CyCPmJ3VLs1KicpjJwGyqPE1ahJcgIjfmH1MuTc12ztlFHuS6nRPNG6p/rmmardTd3vUTfV7Wr3f&#13;
-wvHf+XTVi/eGMF1/hQDxrPp4o7XfEAWqv5nWcODu7mAEatkZzVI76ZEqgs9A8OwLr3FCVmAGPMYv&#13;
-MfPIBcSqPqLWBPiji1myjLB5BP+W7xOujWLF0uH2iLNtNmUz1j2ZhPb/g6rL5pR44LhdMgDpllDI&#13;
-Vz1/IYWLoifLdpjeoGY83KKQ9WQxzlhhcC0lYA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_426e8689-bbc3-4bd6-9df1-30b1847ab28d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vA3x/TJUtPYZ9yjKGJ9mQC0Tm4iySpMvGWvubE3qK9/Yv+hC8pXiV5PIrlxRa/iBv10gSvrI5IX0&#13;
+NUbGWZ9oHw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a4e1b66b-b5c5-44d5-ac48-5fca92e8eab6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aoZRaA9Apf+7vkzbPa/STkeNfBd59lVrjYrCwjnXATnbpkZfh7KQ/4bPp5LLEC7s/Va6Z3NVi7dC&#13;
+DXIEUDh4Ew==</DigestValue></Reference></SignedInfo><SignatureValue>C3zdqdY5kWapleYNCT3uqPA9OFilMCZHwptDLss1aRoNBvm5X299PVEinxbrgYDE5kXWRDTXq+J8&#13;
+NW3b2smu5CjMPlfIZ2/e9iJ3lZVoPSlmsCAbXzpWtAPcFYPveUTb0Tv2eM+3kBQu7ViNHylPSmDT&#13;
+bVv/aQEUIXanO8+P+h9uoYg5UJOX/a1WSo/+rFPg7ZmGk18nl7kpcwtBYZOC52YXyXPocU9PLovK&#13;
+8NoBUbHw7sbckI26NNDFTmteKQVPOyaSypAkH+6Jiq6ys3y1g/mglxfxilCMpSOKaBphGsxrWAw4&#13;
+qYVC+aTvRRp+9VJjy+8lIU/Ewg1eBtRK6lgdhg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1343,4 +1498,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8c187d5c-892d-44b5-b26d-c2821ac2cfce" Target="#_cff2275f-5948-42f0-8b77-a981ed7760d5"><Timestamp>2023-04-20 13:07:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a4e1b66b-b5c5-44d5-ac48-5fca92e8eab6" Target="#_426e8689-bbc3-4bd6-9df1-30b1847ab28d"><Timestamp>2023-04-20 13:47:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
