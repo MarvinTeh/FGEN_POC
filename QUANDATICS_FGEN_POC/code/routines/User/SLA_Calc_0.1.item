@@ -351,7 +351,8 @@ public class SLA_Calc {
         		}
         		else
         		{
-        			TotalSLA+=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"HH")));
+        			Double Val=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"HH")));
+        			TotalSLA+=Val>9.0?9.0:Val;
         			System.out.println(TotalSLA);
         		}
         	}
