@@ -48,7 +48,10 @@ public class SLA_Calc {
 		{
         	System.out.println(TalendDate.formatDate("EEE", CurrDate));
         	if(i>0&&(String.valueOf(TalendDate.getPartOfDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.getPartOfDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
-        	{continue;}
+        	{
+        		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
+        		continue;
+        	}
         	if(i==Counter&&Counter==0)
         	{
         		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
