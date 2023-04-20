@@ -45,7 +45,7 @@ public class SLA_Calc {
         
         for(int i=0;i<Counter;i++)
 		{
-        	if(i==Counter)
+        	if(i==Counter&&Counter==0)
         	{
         		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH")))/9);
         	}
