@@ -621,13 +621,29 @@ public static Double  Release_Calc( Date CV_Release, Date PAymentRelease, String
     	}
     	else if(i==0)
     	{
-    		TotalSLA=Double.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm")));
-    		System.out.println(TotalSLA);
+    		if(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")))<0)
+    		{
+    			TotalSLA=0.0;
+    			System.out.println(TotalSLA);
+    		}
+    		else
+    		{
+    			TotalSLA=Double.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm")));
+    			System.out.println(TotalSLA);
+    		}
     	}
     	else if(i==Counter)
     	{
-    		TotalSLA+=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")));
-    		System.out.println(TotalSLA);
+    		if(Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")))<0.0)
+    		{
+    			TotalSLA+=0.0;
+    			System.out.println(TotalSLA);
+    		}
+    		else
+    		{
+    			TotalSLA+=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")));
+    			System.out.println(TotalSLA);
+    		}
     	}
     	else
     	{
