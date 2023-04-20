@@ -325,11 +325,19 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_7EhR0NbEEe2jnPIM1QAqSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_AxMIcNa_Ee2jnPIM1QAqSQ",
     "version" : "Latest",
     "type" : "property"
   }, {
     "id" : "_1r4c4NzdEe24L7dTAqU3HQ - SAP_PURCHASE_ORDER",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_7EhR0NbEEe2jnPIM1QAqSQ - PROCUREMENT_TRANSACTIONS",
     "version" : "Latest",
     "type" : "schema"
   }, {
