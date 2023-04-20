@@ -46,7 +46,7 @@ public class SLA_Calc {
         
         for(int i=0;i<=Counter;i++)
 		{
-        	System.out.println(Start_day);
+        	System.out.println(CurrDate);
         	/*if(i>0&&(String.valueOf(TalendDate.getPartOfDate("ddd", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.getPartOfDate("ddd", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{break;}*/
         	if(i==Counter&&Counter==0)
@@ -69,7 +69,7 @@ public class SLA_Calc {
         		TotalSLA+=9.0;
         		System.out.println(TotalSLA);
         	}
-        	TalendDate.addDate(CurrDate, +1, "dd");
+        	TalendDate.addDate(CurrDate, 1, "HH");
 		}
         
         TotalSLA=TotalSLA/9.0;
