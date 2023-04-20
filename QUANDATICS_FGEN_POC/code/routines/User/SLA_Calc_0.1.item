@@ -42,18 +42,27 @@ public class SLA_Calc {
         
         Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(End_day,Start_day,"DD")));
         System.out.println(Counter);
+        Date CurrDate=Start_day;
         
         for(int i=0;i<=Counter;i++)
 		{
         	if(i==Counter&&Counter==0)
         	{
         		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
-        		System.out.println(TalendDate.diffDate(End, Start,"HH"));
         	}
         	else if(i==0)
         	{
-        		//TotalSLA=TalendDate.diffDate(TalendDate.addDate(Start_day, 8, "HH"), Start);
+        		TotalSLA+=TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start);
         	}
+        	else if(i==Counter)
+        	{
+        		TotalSLA+=TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"));
+        	}
+        	else
+        	{
+        		TotalSLA+=9.0;
+        	}
+        	TalendDate.addDate(CurrDate, 1, "dd");
 		}
         
         TotalSLA=TotalSLA/9.0;
