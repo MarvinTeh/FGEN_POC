@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:MwuXmzJmp4RY9Xo8d8zfTWWGyVmg7D5Keqh7FVLT"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:DEmpgG9cOgf3HnrM/XTtz2/Ej6UrOW5vXHrZiYSO"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ARltSoI4//DDr9UXKMd1f5G61XaX3pZNeVzvqTvJ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:p/MwJqaqhprLmG3hWpHDVJvPWqJsq67zy2VQhgsk"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -887,7 +887,7 @@
       <column comment="" key="false" length="0" name="SLA_Exceed_Payment_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfMerged" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ToCalc.ID" name="ID" nullable="true" type="id_String"/>
@@ -999,7 +999,7 @@
       <column comment="" key="false" length="-1" name="SLA_Payment_Duration" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_Payment_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata name="Non_PO">
+    <metadata connector="FLOW" name="Non_PO">
       <column comment="" key="false" length="0" name="ID" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="InvoiceReceipt" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="Company" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1026,7 +1026,11 @@
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="(copyOfMerged.Request_Approval_Hour==null?0.0:copyOfMerged.Request_Approval_Hour)+(copyOfMerged.IBS_Receiving_Hour==null?0.0:copyOfMerged.IBS_Receiving_Hour) " name="SLA_Creation_Duration" type="id_Double"/>
+        <mapperTableEntries expression="(copyOfMerged.Doc_Parking_Hour==null?0.0:copyOfMerged.Doc_Parking_Hour)+(copyOfMerged.Doc_Posting_Hour==null?0.0:copyOfMerged.Doc_Posting_Hour) " name="SLA_IBS_Duration" type="id_Double"/>
+        <mapperTableEntries expression="(copyOfMerged.CheckVoucherReview_Hour==null?0.0:copyOfMerged.CheckVoucherReview_Hour) " name="SLA_Payment_Duration" type="id_Double"/>
+      </varTables>
       <outputTables activateExpressionFilter="true" expressionFilter="copyOfMerged.Source.equals(&quot;PO&quot;)" name="PO" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="copyOfMerged.ID " name="ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="copyOfMerged.InvoiceReceipt " name="InvoiceReceipt" nullable="true" type="id_String"/>
@@ -1048,12 +1052,12 @@
         <mapperTableEntries expression="copyOfMerged.Payment_Run_Hour " name="Payment_Run_Hour" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="copyOfMerged.CheckVoucherReview_Hour " name="CheckVoucherReview_Hour" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="copyOfMerged.PaymentRelease_Hour " name="PaymentRelease_Hour" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="(copyOfMerged.Request_Approval_Hour==null?0.0:copyOfMerged.Request_Approval_Hour)+(copyOfMerged.IBS_Receiving_Hour==null?0.0:copyOfMerged.IBS_Receiving_Hour) " name="SLA_Creation_Duration" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_Creation_Flag " name="SLA_Exceed_Creation_Flag" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(copyOfMerged.Doc_Parking_Hour==null?0.0:copyOfMerged.Doc_Parking_Hour)+(copyOfMerged.Doc_Posting_Hour==null?0.0:copyOfMerged.Doc_Posting_Hour) " name="SLA_IBS_Duration" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_IBS_Flag " name="SLA_Exceed_IBS_Flag" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(copyOfMerged.CheckVoucherReview_Hour==null?0.0:copyOfMerged.CheckVoucherReview_Hour) " name="SLA_Payment_Duration" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="copyOfMerged.SLA_Exceed_Payment_Flag " name="SLA_Exceed_Payment_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.SLA_Creation_Duration " name="SLA_Creation_Duration" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="Var.SLA_Creation_Duration&lt;=1.0?&quot;0&quot;:&quot;1&quot;" name="SLA_Exceed_Creation_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.SLA_IBS_Duration " name="SLA_IBS_Duration" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="Var.SLA_IBS_Duration&lt;=13.5?&quot;0&quot;:&quot;1&quot;" name="SLA_Exceed_IBS_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.SLA_Payment_Duration " name="SLA_Payment_Duration" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="Var.SLA_Payment_Duration&lt;=4.5?&quot;0&quot;:&quot;1&quot;" name="SLA_Exceed_Payment_Flag" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="copyOfMerged.Source.equals(&quot;Non-PO&quot;)" name="Non_PO" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="copyOfMerged.ID " name="ID" nullable="true" type="id_String"/>
@@ -1434,12 +1438,12 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileInputDelimited_2" target="tJava_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileInputDelimited_2" target="tFileInputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tFileInputDelimited_2" target="tJava_3">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileInputDelimited_2" target="tFileInputDelimited_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFlowToIterate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1470,13 +1474,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6b8d16f9-45dd-425a-811e-b5e71935e0d1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wnBjxLd6BSKRtwXXR4yI8YdQQv1YzBYVGhNj9nLBEkwSlqtmS2zVJozPT37Vh8O8hn2Q3hPJA2fx&#13;
-3B9ciGcgQw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_39de710c-ad1d-4500-8183-c7869d2f1226"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>J5CxQzdZ32dwOOSbAN3FY8H96rR5tZ01CGCQ5zsME5koeyA9y6eKobC0cD4s9+GljPJNunOZxyQX&#13;
-LKQ4U2wjhA==</DigestValue></Reference></SignedInfo><SignatureValue>ZBJ2Zc6U/KBJ/9wQeeFco6+8PDUuSNH4q5kyIhE/XYeC9eECAl1c4E951mVRVlVV9lbPlL2IU9fj&#13;
-zU015M/+D51WOaOxytmONDrHF72YKHnGPWpirdM+dd6mB1HGyRSMaFqgb81zr42eB23SutmP13Ya&#13;
-SGBtaMkEY9Fp5oWdS3j9/6+zOVpXUD4uowfdsmmk/F09wpmhzczaXitK463mq7tLhq9gICp/pRwA&#13;
-TdHr4r9AG1eSb7pPZoVjc20JOKLjrBTklVaGJMdTef4ygHFlG69opVsnx+ppKQ7cXWhmXrHuAeCL&#13;
-khb9DkikYrQKD2XKIe6Qr+3Hr7natdDkoCvzaQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2b8392a5-63a9-4ecc-9c97-ead4ce308531"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LYzFDX8ks4FjMtHe6dSYla0ndT9mkv53MO+ZMloZ2uEIvtKVSCozE+SAH4j+E6QWGk1TbvYDju+z&#13;
+LxPqwH41CQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4fd50ef6-59c1-4cdf-a862-1d2be7d3edfd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+JOzLnbeR5bKrvTn7bcQxx4gIj5G4bvZAAHW1PzNBWXJV6ndjv+V9HMo4n/fCD28o19FmWmBGHDE&#13;
+HYiltYbM3Q==</DigestValue></Reference></SignedInfo><SignatureValue>dDZpJDH0TD21uKlAscyEU5Pfltiv57naXJX20dTKqExvy2hWFipc94T09Fi/0NzM4xPSNUb5nNQy&#13;
+da3I4NSmsZCdZ0XJMVdNOu8quuGvrl+FUctBDUchUQHe+aDGYXmu+WlrDMHznJF2r4MrHt75Y+yJ&#13;
+32M9oBl/lggQ1VQZ/tK3skKtN+HFKCUATg9lVwOaPYaT5/IEjvCxDhFTjppJbf/JTVsOS+QU/fu/&#13;
+4C0H8kHE2LVxXeUA6RUOtjnbIu7QHzfz5+0tMIfkjpjTb4Hagj5BEwlOClF96pgtZCj5veN0BenL&#13;
+VFjrWjWnpK/QQlMQmtNwaZWS76XIIk0F6lPiig==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1498,4 +1502,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_39de710c-ad1d-4500-8183-c7869d2f1226" Target="#_6b8d16f9-45dd-425a-811e-b5e71935e0d1"><Timestamp>2023-04-20 13:47:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4fd50ef6-59c1-4cdf-a862-1d2be7d3edfd" Target="#_2b8392a5-63a9-4ecc-9c97-ead4ce308531"><Timestamp>2023-04-20 14:06:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
