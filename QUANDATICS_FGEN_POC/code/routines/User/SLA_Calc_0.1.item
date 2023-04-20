@@ -81,9 +81,9 @@ public class SLA_Calc {
         
     }
     
-    public static Double PO_Creation_Calc(Date PRCreation, Date PRApproval, Date POCreation,Date POApproval, String Holidays) {
+    public static Double PO_Creation_Calc(Date PRApproval, Date POCreation,Date POApproval, String Holidays) {
     	//initialize input dates
-        Date Start= PRApproval==null?PRCreation:PRApproval;
+        Date Start= PRApproval;
         Date End= POCreation==null?POApproval:POCreation;
         
         //initialize calculation variables
@@ -132,9 +132,9 @@ public class SLA_Calc {
         
     }
     
-    public static Double PO_Approval_Calc(Date PRApproval, Date POCreation, Date POApproval,Date GR, String Holidays) {
+    public static Double PO_Approval_Calc(Date POCreation, Date POApproval,Date GR, String Holidays) {
     	//initialize input dates
-        Date Start= POCreation==null?PRApproval:POCreation;
+        Date Start= POCreation;
         Date End= POApproval==null?GR:POApproval;
         
         //initialize calculation variables
@@ -183,9 +183,9 @@ public class SLA_Calc {
         
     }
     
-    public static Double GR_Calc(Date POCreation, Date POApproval, Date GR,Date Submission, String Holidays) {
+    public static Double GR_Calc(Date POApproval, Date GR,Date Submission, String Holidays) {
     	//initialize input dates
-        Date Start= POApproval==null?POCreation:POApproval;
+        Date Start= POApproval;
         Date End= GR==null?Submission:GR;
         
         //initialize calculation variables
@@ -234,10 +234,10 @@ public class SLA_Calc {
         
     }
     
-    public static Double Invoice_Calc(Date POApproval, Date GR, Date InvoiceDate,Date Approval, String Holidays) {
+    public static Double Invoice_Calc( Date GR, Date InvoiceDate,Date Approval, String Holidays) {
     	//initialize input dates
-        Date Start= POApproval==null?POCreation:POApproval;
-        Date End= GR==null?Submission:GR;
+        Date Start= GR;
+        Date End= InvoiceDate==null?Approval:InvoiceDate;
         
         //initialize calculation variables
         Double TotalSLA=0.0;
