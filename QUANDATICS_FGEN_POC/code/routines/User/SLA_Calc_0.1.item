@@ -35,6 +35,6 @@ public class SLA_Calc {
      */
     public static void InvSubmission_Approval(Date SubmitDate, Date ApprovalDate, Date IBS_Recv, String Holidays) {
         
-        System.out.println("Hello " + " !"); //$NON-NLS-1$ //$NON-NLS-2$
+        System.out.println("Hello " + " !"); 
     }
 }
