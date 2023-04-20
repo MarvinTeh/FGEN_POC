@@ -37,10 +37,8 @@ public class SLA_Calc {
         Date Start= PRCreation;
         Date End= PRApproval==null?POCreation:PRApproval;
         
-        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"DD")));
+        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",End)), TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",Start)),"DD")));
         System.out.println(Counter);
-        
-        
         
     }
 }
