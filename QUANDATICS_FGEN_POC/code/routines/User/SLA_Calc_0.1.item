@@ -46,7 +46,7 @@ public class SLA_Calc {
         
         for(int i=0;i<=Counter;i++)
 		{
-        	System.out.println(TalendDate.formatDate("ddd", CurrDate));
+        	System.out.println(TalendDate.formatDate("eee", CurrDate));
         	if(i>0&&(String.valueOf(TalendDate.getPartOfDate("ddd", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.getPartOfDate("ddd", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
         	{continue;}
         	if(i==Counter&&Counter==0)
