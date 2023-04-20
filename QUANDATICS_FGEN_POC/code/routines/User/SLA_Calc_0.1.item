@@ -54,6 +54,7 @@ public class SLA_Calc {
         	else if(i==0)
         	{
         		TotalSLA=Double.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start)));
+        		System.out.println(TalendDate.addDate(Start_day, 17, "HH"));
         		System.out.println(TotalSLA);
         	}
         	else if(i==Counter)
