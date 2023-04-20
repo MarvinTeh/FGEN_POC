@@ -419,7 +419,8 @@ public class SLA_Calc {
         		}
         		else
         		{
-        			TotalSLA+=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")));
+        			Double Val=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")));;
+        			TotalSLA+=Val>540.0?540.0:Val;
         			System.out.println(TotalSLA);
         		}
         	}
@@ -487,7 +488,8 @@ public static Double IBSRecv_Calc( Date Approval, Date IBS_Receiving,Date Parkin
     		}
     		else
     		{
-    			TotalSLA+=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")));
+    			Double Val=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")));;
+    			TotalSLA+=Val>540.0?540.0:Val;
     			System.out.println(TotalSLA);
     		}
     	}
