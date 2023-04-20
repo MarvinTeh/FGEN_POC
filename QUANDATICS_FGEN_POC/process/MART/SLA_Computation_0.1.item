@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" internalId="_Q-Cr4N9iEe2NK4yvzMJZ1A" name="PH" prompt="PH?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -43,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:FFyramdbUvNKMGpflNAxbHHrlv+wRjlYyzm8Q671"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:mWbL/I0fAe1/2fYqkT158LS3Ajb34bfUhLIbhwS8"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:aAj4ymXatNy30pYpEsRKdGmDCng7L0Og60o5Aypk"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:jF5QEX92Vyz8V6FqmsbwMCSaMYnF6LjzNnIC4xTg"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -113,983 +115,9 @@
     <routinesParameter id="_iB1fMNa-Ee2WNJHQPXmWEQ" name="TalendStringUtil"/>
     <routinesParameter id="_iB0RENa-Ee2WNJHQPXmWEQ" name="TalendString"/>
   </parameters>
-  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;/Users/hsienher/Documents/Stage/Fgen/Data/ProcumentTransactions.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:BX+tcxQmCxueTa7nNP4A4MqqKHMP7CSLYCpmZG3B"/>
-    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
-    <elementParameter field="TABLE" name="SHEETLIST">
-      <elementValue elementRef="SHEETNAME" value="&quot;Sheet1&quot;"/>
-      <elementValue elementRef="USE_REGEX" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="HEADER" value="1"/>
-    <elementParameter field="TEXT" name="FOOTER" value="0"/>
-    <elementParameter field="TEXT" name="LIMIT" value=""/>
-    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
-    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
-    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
-    <elementParameter field="TABLE" name="TRIMSELECT">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICERECEIPTNO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYEENAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENTSTEP"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_DOCUMENT_NUMBER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_NUMBER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_GR_SES_NUMBER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NON_PO_TYPE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TOTALAMOUNT"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENCY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ENTITY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AMOUNTTYPE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTIONTYPE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TOTALPHP"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTMODE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PR_CREATION"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PR_APPROVAL"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_CREATION"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_APPROVAL"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="GR_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICESUBMISSIONT_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="APPROVAL_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="IBS_RECEIVING_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKING_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="POSTING_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUN_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHER_REVIEW_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT_RELEASE_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKRELEASING_STATUS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKRELEASING_SLA_BREACHED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKINGDATE_STATUS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKINGDATE_SLA_BREACHED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUNDATE_STATUS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUNDATE_SLA_BREACHED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="true"/>
-    <elementParameter field="TABLE" name="DATESELECT">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICERECEIPTNO"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYEENAME"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENTSTEP"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_DOCUMENT_NUMBER"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_NUMBER"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_GR_SES_NUMBER"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NON_PO_TYPE"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TOTALAMOUNT"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENCY"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ENTITY"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AMOUNTTYPE"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTIONTYPE"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TOTALPHP"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTMODE"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PR_CREATION"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PR_APPROVAL"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_CREATION"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_APPROVAL"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="GR_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICESUBMISSIONT_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="APPROVAL_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="IBS_RECEIVING_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKING_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="POSTING_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUN_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHER_REVIEW_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT_RELEASE_DATE"/>
-      <elementValue elementRef="CONVERTDATE" value="true"/>
-      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKRELEASING_STATUS"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKRELEASING_SLA_BREACHED"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKINGDATE_STATUS"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKINGDATE_SLA_BREACHED"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUNDATE_STATUS"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUNDATE_SLA_BREACHED"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-    </elementParameter>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="READ_REAL_VALUE" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
-    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" show="false" value="false"/>
-    <elementParameter field="CHECK" name="SUPPRESS_WARN" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
-    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CONFIGURE_INFLATION_RATIO" value="false"/>
-    <elementParameter field="TEXT" name="INFLATION_RATIO" show="false" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="PROCUREMENT_TRANSACTIONS" name="tFileInputExcel_1">
-      <column comment="" key="false" length="16777216" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ID"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="INVOICERECEIPTNO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICERECEIPTNO"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYEENAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYEENAME"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENTSTEP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENTSTEP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_DOCUMENT_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_GR_SES_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_GR_SES_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SOURCE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SOURCE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="NON_PO_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="NON_PO_TYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALAMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALAMOUNT"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENCY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="ENTITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ENTITY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="AMOUNTTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="AMOUNTTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TRANSACTIONTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALPHP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALPHP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTMODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTMODE"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="GR_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="GR_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="INVOICESUBMISSIONT_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICESUBMISSIONT_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="APPROVAL_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="APPROVAL_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="IBS_RECEIVING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="IBS_RECEIVING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PARKING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="POSTING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENTRUN_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUN_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CHECKVOUCHER_REVIEW_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHER_REVIEW_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENT_RELEASE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENT_RELEASE_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_SLA_BREACHED"/>
-      </column>
-    </metadata>
-    <metadata connector="REJECT" label="PROCUREMENT_TRANSACTIONS" name="REJECT">
-      <column comment="" key="false" length="16777216" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ID"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="INVOICERECEIPTNO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICERECEIPTNO"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYEENAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYEENAME"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENTSTEP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENTSTEP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_DOCUMENT_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_GR_SES_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_GR_SES_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SOURCE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SOURCE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="NON_PO_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="NON_PO_TYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALAMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALAMOUNT"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENCY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="ENTITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ENTITY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="AMOUNTTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="AMOUNTTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TRANSACTIONTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALPHP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALPHP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTMODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTMODE"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="GR_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="GR_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="INVOICESUBMISSIONT_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICESUBMISSIONT_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="APPROVAL_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="APPROVAL_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="IBS_RECEIVING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="IBS_RECEIVING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PARKING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="POSTING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENTRUN_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUN_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CHECKVOUCHER_REVIEW_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHER_REVIEW_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENT_RELEASE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENT_RELEASE_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_SLA_BREACHED"/>
-      </column>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICERECEIPTNO"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYEENAME"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENTSTEP"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_DOCUMENT_NUMBER"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_NUMBER"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SAP_GR_SES_NUMBER"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NON_PO_TYPE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TOTALAMOUNT"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENCY"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ENTITY"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AMOUNTTYPE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTIONTYPE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TOTALPHP"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTMODE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PR_CREATION"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PR_APPROVAL"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_CREATION"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PO_APPROVAL"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="GR_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICESUBMISSIONT_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="APPROVAL_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="IBS_RECEIVING_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKING_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="POSTING_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUN_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHER_REVIEW_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT_RELEASE_DATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKRELEASING_STATUS"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKRELEASING_SLA_BREACHED"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKINGDATE_STATUS"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PARKINGDATE_SLA_BREACHED"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUNDATE_STATUS"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENTRUNDATE_SLA_BREACHED"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="PROCUREMENT_TRANSACTIONS" name="tLogRow_1">
-      <column comment="" key="false" length="16777216" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ID"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="INVOICERECEIPTNO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICERECEIPTNO"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYEENAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYEENAME"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENTSTEP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENTSTEP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_DOCUMENT_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_GR_SES_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_GR_SES_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SOURCE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SOURCE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="NON_PO_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="NON_PO_TYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALAMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALAMOUNT"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENCY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="ENTITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ENTITY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="AMOUNTTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="AMOUNTTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TRANSACTIONTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALPHP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALPHP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTMODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTMODE"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="GR_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="GR_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="INVOICESUBMISSIONT_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICESUBMISSIONT_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="APPROVAL_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="APPROVAL_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="IBS_RECEIVING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="IBS_RECEIVING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PARKING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="POSTING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENTRUN_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUN_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CHECKVOUCHER_REVIEW_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHER_REVIEW_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENT_RELEASE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENT_RELEASE_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_SLA_BREACHED"/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_k1eQgN86Ee2Ka6I185CUyg-tMap_1-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Merged" name="Merged">
-      <column comment="" key="false" length="16777216" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ID"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="INVOICERECEIPTNO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICERECEIPTNO"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYEENAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYEENAME"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENTSTEP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENTSTEP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_DOCUMENT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_DOCUMENT_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PO_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SAP_GR_SES_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SAP_GR_SES_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="SOURCE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SOURCE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="NON_PO_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="NON_PO_TYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALAMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALAMOUNT"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CURRENCY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CURRENCY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="ENTITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ENTITY"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="AMOUNTTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="AMOUNTTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TRANSACTIONTYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONTYPE"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="TOTALPHP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTALPHP"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTMODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTMODE"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PR_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PR_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_CREATION" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_CREATION"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PO_APPROVAL" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_APPROVAL"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="GR_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="GR_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="INVOICESUBMISSIONT_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICESUBMISSIONT_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="APPROVAL_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="APPROVAL_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="IBS_RECEIVING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="IBS_RECEIVING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PARKING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="POSTING_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTING_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENTRUN_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUN_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CHECKVOUCHER_REVIEW_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHER_REVIEW_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="-1" name="PAYMENT_RELEASE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENT_RELEASE_DATE"/>
-        <additionalField key="di.date.timestamp" value="true"/>
-        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKRELEASING_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKRELEASING_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PARKINGDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PARKINGDATE_SLA_BREACHED"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_STATUS"/>
-      </column>
-      <column comment="" key="false" length="16777216" name="PAYMENTRUNDATE_SLA_BREACHED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PAYMENTRUNDATE_SLA_BREACHED"/>
-      </column>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="Merged" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.ID" name="ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.INVOICERECEIPTNO" name="INVOICERECEIPTNO" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.COMPANY" name="COMPANY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PAYEENAME" name="PAYEENAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.STATUS" name="STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CURRENTSTEP" name="CURRENTSTEP" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.SAP_DOCUMENT_NUMBER" name="SAP_DOCUMENT_NUMBER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PO_NUMBER" name="PO_NUMBER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.SAP_GR_SES_NUMBER" name="SAP_GR_SES_NUMBER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.SOURCE" name="SOURCE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.NON_PO_TYPE" name="NON_PO_TYPE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.TOTALAMOUNT" name="TOTALAMOUNT" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CURRENCY" name="CURRENCY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.ENTITY" name="ENTITY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.AMOUNTTYPE" name="AMOUNTTYPE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.TRANSACTIONTYPE" name="TRANSACTIONTYPE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.TOTALPHP" name="TOTALPHP" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PAYMENTMODE" name="PAYMENTMODE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PR_CREATION==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PR_CREATION) " name="PR_CREATION" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PR_APPROVAL==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PR_APPROVAL) " name="PR_APPROVAL" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PO_CREATION==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PO_CREATION) " name="PO_CREATION" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PO_APPROVAL==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PO_APPROVAL) " name="PO_APPROVAL" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.GR_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.GR_DATE) " name="GR_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.INVOICESUBMISSIONT_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.INVOICESUBMISSIONT_DATE) " name="INVOICESUBMISSIONT_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.APPROVAL_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.APPROVAL_DATE) " name="APPROVAL_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.IBS_RECEIVING_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.IBS_RECEIVING_DATE) " name="IBS_RECEIVING_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PARKING_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PARKING_DATE) " name="PARKING_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.POSTING_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.POSTING_DATE) " name="POSTING_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PAYMENTRUN_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PAYMENTRUN_DATE) " name="PAYMENTRUN_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.CHECKVOUCHER_REVIEW_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.CHECKVOUCHER_REVIEW_DATE) " name="CHECKVOUCHER_REVIEW_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.PAYMENT_RELEASE_DATE==null?null:TalendDate.parseDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,row1.PAYMENT_RELEASE_DATE) " name="PAYMENT_RELEASE_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.CHECKRELEASING_STATUS" name="CHECKRELEASING_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CHECKRELEASING_SLA_BREACHED" name="CHECKRELEASING_SLA_BREACHED" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" name="CHECKVOUCHERPRINTING_REVIEWDATE_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED" name="CHECKVOUCHERPRINTING_REVIEWDATE_SLA_BREACHED" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PARKINGDATE_STATUS" name="PARKINGDATE_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PARKINGDATE_SLA_BREACHED" name="PARKINGDATE_SLA_BREACHED" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PAYMENTRUNDATE_STATUS" name="PAYMENTRUNDATE_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.PAYMENTRUNDATE_SLA_BREACHED" name="PAYMENTRUNDATE_SLA_BREACHED" nullable="true" type="id_String"/>
-      </outputTables>
-    </nodeData>
-  </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;/Users/hsienher/Documents/Stage/Fgen/Data/ProcumentTransactions.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
@@ -1575,6 +603,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1733,7 +762,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfMerged" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.ID" name="ID" nullable="true" type="id_String"/>
@@ -1821,6 +850,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -2061,41 +1091,251 @@
       </column>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="source" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tLogRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="source"/>
-  </connection>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_2"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;/Users/hsienher/Documents/Stage/Fgen/Data/Holiday.csv&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" show="false" value="&quot;/Applications/TalendStudio-8.0.1/studio/workspace&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" show="false" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_NAME_LOCAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_LANGUAGE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DESCRIPTION"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_COUNTRY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_LOCATION"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_TYPE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE_YEAR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE_MONTH"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE_DAY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_WEEK_DAY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_NAME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_NAME_LOCAL"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_LANGUAGE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DESCRIPTION"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_COUNTRY"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_LOCATION"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_TYPE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE_YEAR"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE_MONTH"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_DATE_DAY"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PH_WEEK_DAY"/>
+      <elementValue elementRef="DECODE" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_2">
+      <column comment="" key="false" length="-1" name="PH_NAME" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_NAME_LOCAL" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_LANGUAGE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DESCRIPTION" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_COUNTRY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_LOCATION" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_TYPE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_YEAR" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_MONTH" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_DAY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_WEEK_DAY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="PH_NAME" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_NAME_LOCAL" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_LANGUAGE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DESCRIPTION" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_COUNTRY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_LOCATION" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_TYPE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_YEAR" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_MONTH" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_DAY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_WEEK_DAY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_k1eQgN86Ee2Ka6I185CUyg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="-1" name="PH_NAME" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_NAME_LOCAL" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_LANGUAGE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DESCRIPTION" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_COUNTRY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_LOCATION" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_TYPE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_YEAR" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_MONTH" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_DATE_DAY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PH_WEEK_DAY" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="row2.PH_TYPE.equals(&quot;National&quot;)" name="out1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row2.PH_NAME " name="PH_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_NAME_LOCAL " name="PH_NAME_LOCAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_LANGUAGE " name="PH_LANGUAGE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_DESCRIPTION " name="PH_DESCRIPTION" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_COUNTRY " name="PH_COUNTRY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_LOCATION " name="PH_LOCATION" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_TYPE " name="PH_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.parseDate(&quot;dd/MM/yyyy&quot;row2.PH_DATE)) " name="PH_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_DATE_YEAR " name="PH_DATE_YEAR" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_DATE_MONTH " name="PH_DATE_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_DATE_DAY " name="PH_DATE_DAY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PH_WEEK_DAY " name="PH_WEEK_DAY" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="PH_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_NAME_LOCAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_LANGUAGE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_DESCRIPTION" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_COUNTRY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_LOCATION" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_DATE_YEAR" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_DATE_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_DATE_DAY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PH_WEEK_DAY" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_1"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
+    <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.PH+=((String)globalMap.get(&quot;out1.PH_DATE&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(context.PH);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfMerged" lineStyle="0" metaname="copyOfMerged" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfMerged"/>
   </connection>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFlowToIterate_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_1" target="tJava_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1d95f13a-bd2b-40cd-9e58-810a1bd4cb29"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cCTc6LpNPRT9b13b+0XE6mmOZFWC1hzeNDgRpQ2UWxSYu4Ef/erQFCUFbNlVA6790RW3envRypYL&#13;
-hHpezDisgQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dc53f492-cb59-4841-9005-13d34ec5d2f5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iP2Sxc5E4Prsln9gsIpW3kDsm1YI7fEQfXcIPVD2KOLW88enICeUgcnr78M2pI1srUNrSN/UzSVD&#13;
-8YIsVWXvnw==</DigestValue></Reference></SignedInfo><SignatureValue>L1ZZ3i45XBFT+OIY7MOZGssJFqS4b1nVNwK5WuAD9P1piWTiU57C5b6CaneAfH7YROaVm20ox5HG&#13;
-4PMf0IUQuLo04CPD0/3qLECGwLffKcQ3if2AukkdSeCjct4c6EX3ZCimIgdFBJsi6eWueCPwFGXE&#13;
-/W8xdxAjlV9nooszI6EcdhDnLZEvUkKyPwszeqhrS/owcRKpdLhlL/OtWuYYTUtQ5vCaymbSk5Ha&#13;
-lkxGa31FtgkEC1eowLCaYFpi5JUnrShZdy3D5sW8ZisByZNZ7T49gPZhpi4NGDm53fbyCwZIhKCq&#13;
-oGhEZMAos1rCdv8lWVXQMH+3+K3kiTBbu+35Ng==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a2df68e3-3619-4c06-bbf2-326a73bb2ff0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gL/Wrka8FgQribADksZf0yWD7IWIPTzJetJasDWq1NwNyu2auD/cWh8mDArgw+6ow9iyO9yZFtLO&#13;
+Se822lxS1w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a3f49a4b-9ca8-45d2-9186-aebefe8f4191"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>t7xbVjmmVTuSQwdQkgkzMTX5AVKBJvuNAFmBrwfou8mNETKn01rse0+TYQ/js90QJ7qzuxnTbYEz&#13;
+YIL1TvsTzA==</DigestValue></Reference></SignedInfo><SignatureValue>mm2y0kgWJ+kW7NDUqkJ7ixUgRpavjKlC55zxSim5ldSVzuZ+tUDhyZNm0WbTv/UrPKWB6v2TbYK2&#13;
+0EDaokXNugJZapgutsCV82QD0UAXrqMj97DbBQhtdd8llRRoUgYr4nML2HPTRoKSIYCwScjAUQfi&#13;
+Q9ONo7BKujp4v7TbYk7v2YeT/PNpD4Na5/sx2g0lQpiSv92bSa/FWJRZClFHigU2arPuRBcX6tNZ&#13;
+x1/YdPMKs6JrvApkpMMt06kbhSLnZiDvDStc0Pn9Xu/SaPiBtkLNPaWl0vpYZK1zLRGU1LKhdykl&#13;
+2tOGNLEk0Kc4Pt9TvcyJyJXReSlASjKst3CKew==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2117,4 +1357,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dc53f492-cb59-4841-9005-13d34ec5d2f5" Target="#_1d95f13a-bd2b-40cd-9e58-810a1bd4cb29"><Timestamp>2023-04-20 05:11:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a3f49a4b-9ca8-45d2-9186-aebefe8f4191" Target="#_a2df68e3-3619-4c06-bbf2-326a73bb2ff0"><Timestamp>2023-04-20 09:31:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
