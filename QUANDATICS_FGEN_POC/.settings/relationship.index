@@ -282,10 +282,6 @@
     "id" : "built-in",
     "version" : "Latest",
     "type" : "context"
-  }, {
-    "id" : "_VVuboN9TEe2Ka6I185CUyg - metadata",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
