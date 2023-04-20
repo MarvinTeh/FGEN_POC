@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:yC0fTLVTii6JbgIW8l9z4DFGwp/TvS8dgygZ/bpV"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ieo9W5Wit0ZmWRhsNCx8AGfRFVx+XYDQPlb/A1o9"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:shEY2zw+H3AzCen7yzfH9khBdl8Y03LGoL4KvbDJ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Fofa2Eb2lkdCPJiQLvQilKyzYmT3hKMNc836SHI3"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -118,7 +118,6 @@
   </parameters>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;/Users/hsienher/Documents/Stage/Fgen/Data/ProcumentTransactions.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
@@ -604,7 +603,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -851,7 +849,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -899,10 +896,10 @@
         <mapperTableEntries expression="ToCalc.NON_PO_TYPE" name="Non_PO_Type" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ToCalc.STATUS" name="Status" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ToCalc.CURRENTSTEP" name="CurrentStep" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ToCalc.PR_CREATION!=null&amp;&amp;(ToCalc.PR_APPROVAL!=null||ToCalc.PO_CREATION!=null)?PR_Approval_Calc(ToCalc.PR_CREATION,ToCalc.PR_APPROVAL,ToCalc.PO_CREATION,context.PH):null " name="PR_Approval_Day" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PO_Creation_Day" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PO_Approval_Day" nullable="true" type="id_String"/>
-        <mapperTableEntries name="GR_Day" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ToCalc.PR_CREATION!=null&amp;&amp;(ToCalc.PR_APPROVAL!=null||ToCalc.PO_CREATION!=null)?SLA_Calc.PR_Approval_Calc(ToCalc.PR_CREATION,ToCalc.PR_APPROVAL,ToCalc.PO_CREATION,context.PH):null " name="PR_Approval_Day" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(ToCalc.PR_CREATION!=null||ToCalc.PR_APPROVAL!=null|)&amp;&amp;(ToCalc.PO_CREATION!=null||ToCalc.PO_APPROVAL!=null)?SLA_Calc.PO_Creation_Calc(ToCalc.PR_CREATION,ToCalc.PR_APPROVAL,ToCalc.PO_CREATION,ToCalc.PO_APPROVAL,context.PH):null " name="PO_Creation_Day" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(ToCalc.PR_APPROVAL!=null||ToCalc.PO_CREATION!=null|)&amp;&amp;(ToCalc.PO_APPROVAL!=null||ToCalc.GR_DATE!=null)?SLA_Calc.PO_Approval_Calc(ToCalc.PR_APPROVAL,ToCalc.PO_CREATION,ToCalc.PO_APPROVAL,ToCalc.GR_DATE,context.PH):null " name="PO_Approval_Day" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(ToCalc.PO_CREATION!=null||ToCalc.PO_APPROVAL!=null|)&amp;&amp;(ToCalc.GR_DATE!=null||ToCalc.INVOICESUBMISSIONT_DATE!=null)?SLA_Calc.GR_Calc(ToCalc.PO_CREATION,ToCalc.PO_APPROVAL,ToCalc.GR_DATE,ToCalc.INVOICESUBMISSIONT_DATE,context.PH):null " name="GR_Day" nullable="true" type="id_String"/>
         <mapperTableEntries name="Invoice_Request_Hour" nullable="true" type="id_String"/>
         <mapperTableEntries name="Request_Approval_Hour" nullable="true" type="id_String"/>
         <mapperTableEntries name="Doc_Parking_Hour" nullable="true" type="id_String"/>
@@ -958,7 +955,6 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_4SwzAN9jEe2NK4yvzMJZ1A - SLA_TRANSACTIONS"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
@@ -1242,6 +1238,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(SLA_Calc.PR_Approval_Calc(TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;2023-04-03 16:00:00&quot;), TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;2023-04-08 09:00:00&quot;), null, context.PH));&#10;&#10;//System.out.println(String.valueOf(SLA_Calc.PR_Approval_Calc(TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;2023-04-01 08:30:00&quot;), TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;2023-04-01 15:00:00&quot;), null, context.PH)));&#10;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -1249,17 +1246,14 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="ToCalc" lineStyle="0" metaname="ToCalc" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ToCalc"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfMerged" lineStyle="0" metaname="copyOfMerged" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfMerged"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tMap_1">
@@ -1269,7 +1263,11 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileInputDelimited_2" target="tJava_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileInputDelimited_2" target="tJava_3">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileInputDelimited_2" target="tFileInputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tFileInputDelimited_2" target="tJava_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFlowToIterate_1">
@@ -1301,13 +1299,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_539f47da-2787-4c29-a4b1-0a04f2799a45"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9eZgA9M7utQheSDh9eUKx3305D+5GDyPmWWH29eU+1Hgruf1h8z+PkJ/mD/mPyt5TI5DaZi0F56y&#13;
-CDg5FBwwhg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f9f6a2b7-dea5-432b-a1c4-db6def8686c6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>leQC9/Wg6qHNPyPsTjaXn0wxcdUKkdGL7De40zvsbKmkZaSalO8GTvrUBwgFKlWWWypS7FnsVVlM&#13;
-OVHReTYiXA==</DigestValue></Reference></SignedInfo><SignatureValue>WX337Ckfujw0jN9Pb7ciNF/WZXXH97zy2tzjVnD5HXEGuH4UY8sYFqKIPYNSg1lIIop0vQyc6YbG&#13;
-QrQG0/Wc/JXXw0z+xRWQTCJrjeT4lEE6xoEduAGAdDDgJGTZmN5964tfIOcGqfms6nAtiZFbY0zG&#13;
-CcfYreiyVsVOjipni98Wh7ZbbAC9elYufRVdT3aznLvzcYI8XSN5F77QhHKW+xz5BHDkFZPwz2xe&#13;
-Ps+tzQpeZaPixq+ErItuSqpGlSs69TRyVIdWQXvEFXMRJv0gLGZ177hu3nnokhCwbrqFNovZ4vwV&#13;
-sU3M88AMRB2K/gm8OdFG9Wwn+5XTNe+J1DkI0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_29a5454a-6d5d-42c7-9b8d-6b676cc6d2b0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gC7BdY/Af+xZba1pF5vqHioRHoF3NdEkNgC6cLWocmX/jtp+Pox47hv1yrGLpabV4k/OU+EKXjBN&#13;
+KneqD4ic6A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5e16fce9-b1d1-4bb4-9067-d2af9df8b7e5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H/rVtpwXBeZa7tJ2yPgxPEMayMwsBVtMk5NSVgs4wyyhlfzrRYTMoSxXafA7VdmWSn8crRqS2ggl&#13;
++lCDskDXIw==</DigestValue></Reference></SignedInfo><SignatureValue>UM8CBrZdmf0NlbvH8DdCr687WC3Wz3pAdazBLgHhG2TlUZEG6f/Sb1v2zJSf7sYIWbnJNVwVNNvL&#13;
+x2Z9aIn85vNFRwPtDF9Craf9QROzgHY/37Qzf3c0cYZGXmjGxQ9YrzhdU2qkeKzuwBP/rhvs9cV6&#13;
+dQN6d0psko2qdUTWrxMxWPBi/tibFepcTR3g5d5O2SPpF5O4SzgHvyjdqyuq9MNwhUUyknpztmTO&#13;
+yiCkEemd2McUrmSlF+eUsSoX0J1NVSPMqlQzKTQ1sdxIko3EX4wFZRi/lZTjHO4vhAK5+5rnSyTc&#13;
+E5Vm/1JBOgygmQhewb06eiCS7OftWamsC+qmxw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1329,4 +1327,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f9f6a2b7-dea5-432b-a1c4-db6def8686c6" Target="#_539f47da-2787-4c29-a4b1-0a04f2799a45"><Timestamp>2023-04-20 11:02:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5e16fce9-b1d1-4bb4-9067-d2af9df8b7e5" Target="#_29a5454a-6d5d-42c7-9b8d-6b676cc6d2b0"><Timestamp>2023-04-20 11:15:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
