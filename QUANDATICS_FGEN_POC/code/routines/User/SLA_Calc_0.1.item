@@ -284,4 +284,55 @@ public class SLA_Calc {
         return TotalSLA;
         
     }
+    
+    public static Double Approval_Calc( Date InvoiceDate, Date Approval,Date IBS_Receiving, String Holidays) {
+    	//initialize input dates
+        Date Start= InvoiceDate;
+        Date End= Approval==null?IBS_Receiving:Approval;
+        
+        //initialize calculation variables
+        Double TotalSLA=0.0;
+        Date Start_day= TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",Start));
+        Date End_day=TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",End));
+        
+        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(End_day,Start_day,"DD")));
+        System.out.println(Counter);
+        Date CurrDate=Start_day;
+        
+        for(int i=0;i<=Counter;i++)
+		{
+        	System.out.println(TalendDate.formatDate("EEE", CurrDate));
+        	if(i>=0&&(String.valueOf(TalendDate.getPartOfDate("EEE", CurrDate)).equalsIgnoreCase("Sat")||String.valueOf(TalendDate.getPartOfDate("EEE", CurrDate)).equalsIgnoreCase("Sun")||Holidays.contains(TalendDate.formatDate("yyyy-MM-dd", CurrDate))))        	
+        	{
+        		CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
+        		continue;
+        	}
+        	if(i==Counter&&Counter==0)
+        	{
+        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+        		System.out.println(TotalSLA);
+        	}
+        	else if(i==0)
+        	{
+        		TotalSLA=Double.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm")));
+        		System.out.println(TotalSLA);
+        	}
+        	else if(i==Counter)
+        	{
+        		TotalSLA+=Double.valueOf(String.valueOf(TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"),"mm")));
+        		System.out.println(TotalSLA);
+        	}
+        	else
+        	{
+        		TotalSLA+=9.0*60;
+        		System.out.println(TotalSLA);
+        	}
+        	CurrDate=TalendDate.addDate(CurrDate, 1, "dd");
+		}
+        
+        TotalSLA=TotalSLA/60.0;
+        
+        return TotalSLA;
+        
+    }
 }
