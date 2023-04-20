@@ -33,8 +33,14 @@ public class SLA_Calc {
      * 
      * {example} helloExemple("world") # hello world !.
      */
-    public static void InvSubmission_Approval(Date SubmitDate, Date ApprovalDate, Date IBS_Recv, String Holidays) {
+    public static void PR_Approval_Calc(Date PRCreation, Date PRApproval, Date POCreation, String Holidays) {
+        Date Start= PRCreation;
+        Date End= PRApproval==null?POCreation:PRApproval;
         
-        System.out.println("Hello " + " !"); 
+        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(Start, End,"HH")));
+        System.out.println(Counter);
+        
+        
+        
     }
 }
