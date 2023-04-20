@@ -54,8 +54,21 @@ public class SLA_Calc {
         	}
         	if(i==Counter&&Counter==0)
         	{
-        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
-        		System.out.println(TotalSLA);
+        		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"HH")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=0.0;
+					System.out.println(TotalSLA);
+				}
+				else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
+				else
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
         	}
         	else if(i==0)
         	{
@@ -122,8 +135,21 @@ public class SLA_Calc {
         	}
         	if(i==Counter&&Counter==0)
         	{
-        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
-        		System.out.println(TotalSLA);
+        		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"HH")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=0.0;
+					System.out.println(TotalSLA);
+				}
+				else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
+				else
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
         	}
         	else if(i==0)
         	{
@@ -190,8 +216,21 @@ public class SLA_Calc {
         	}
         	if(i==Counter&&Counter==0)
         	{
-        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
-        		System.out.println(TotalSLA);
+        		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"HH")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=0.0;
+					System.out.println(TotalSLA);
+				}
+				else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
+				else
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
         	}
         	else if(i==0)
         	{
@@ -258,8 +297,21 @@ public class SLA_Calc {
         	}
         	if(i==Counter&&Counter==0)
         	{
-        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
-        		System.out.println(TotalSLA);
+        		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"HH")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=0.0;
+					System.out.println(TotalSLA);
+				}
+				else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
+				else
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
         	}
         	else if(i==0)
         	{
@@ -326,8 +378,21 @@ public class SLA_Calc {
         	}
         	if(i==Counter&&Counter==0)
         	{
-        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
-        		System.out.println(TotalSLA);
+        		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"HH")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=0.0;
+					System.out.println(TotalSLA);
+				}
+				else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"HH")<=0)
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
+				else
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
+					System.out.println(TotalSLA);
+				}
         	}
         	else if(i==0)
         	{
@@ -394,8 +459,21 @@ public class SLA_Calc {
         	}
         	if(i==Counter&&Counter==0)
         	{
-        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
-        		System.out.println(TotalSLA);
+        		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+				{
+					TotalSLA=0.0;
+					System.out.println(TotalSLA);
+				}
+				else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm"))));
+					System.out.println(TotalSLA);
+				}
+				else
+				{
+					TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+					System.out.println(TotalSLA);
+				}
         	}
         	else if(i==0)
         	{
@@ -463,8 +541,21 @@ public static Double IBSRecv_Calc( Date Approval, Date IBS_Receiving,Date Parkin
     	}
     	if(i==Counter&&Counter==0)
     	{
-    		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
-    		System.out.println(TotalSLA);
+    		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=0.0;
+				System.out.println(TotalSLA);
+			}
+			else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
+			else
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
     	}
     	else if(i==0)
     	{
@@ -531,8 +622,21 @@ public static Double Parking_Calc( Date IBS_Receiving, Date Parking,Date Posting
     	}
     	if(i==Counter&&Counter==0)
     	{
-    		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
-    		System.out.println(TotalSLA);
+    		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=0.0;
+				System.out.println(TotalSLA);
+			}
+			else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
+			else
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
     	}
     	else if(i==0)
     	{
@@ -599,8 +703,21 @@ public static Double Posting_Calc( Date Parking, Date Posting,Date paymentrun, S
     	}
     	if(i==Counter&&Counter==0)
     	{
-    		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
-    		System.out.println(TotalSLA);
+    		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=0.0;
+				System.out.println(TotalSLA);
+			}
+			else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
+			else
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
     	}
     	else if(i==0)
     	{
@@ -667,8 +784,21 @@ public static Double paymentRun_Calc( Date Posting, Date paymentrun,Date CV_Rele
     	}
     	if(i==Counter&&Counter==0)
     	{
-    		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
-    		System.out.println(TotalSLA);
+    		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=0.0;
+				System.out.println(TotalSLA);
+			}
+			else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
+			else
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
     	}
     	else if(i==0)
     	{
@@ -735,8 +865,21 @@ public static Double  CV_Calc( Date paymentrun, Date CV_Release,Date PAymentRele
     	}
     	if(i==Counter&&Counter==0)
     	{
-    		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
-    		System.out.println(TotalSLA);
+    		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=0.0;
+				System.out.println(TotalSLA);
+			}
+			else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
+			else
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
     	}
     	else if(i==0)
     	{
@@ -803,8 +946,21 @@ public static Double  Release_Calc( Date CV_Release, Date PAymentRelease, String
     	}
     	if(i==Counter&&Counter==0)
     	{
-    		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
-    		System.out.println(TotalSLA);
+    		if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),Start,"mm")<=0&&TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=0.0;
+				System.out.println(TotalSLA);
+			}
+			else if(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"),End,"mm")<=0)
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
+			else
+			{
+				TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"mm"))));
+				System.out.println(TotalSLA);
+			}
     	}
     	else if(i==0)
     	{
