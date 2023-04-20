@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:AoIkQvrXIu/vmdhRkCiAm+AbQwZWMcs1woEnVd/Y"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:VaZoacl0pJXaPN+NiKb5GYlLyXwcwV3dvRjDLCe3"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:xWipS7jTdyqN8XhIvWpxadi0Z81kGu7bf9aqmw+B"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:LuvJRZbkNDmx2/MQxOuIMbL3JviEvIbMOGInQTL8"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -874,12 +874,12 @@
       <column comment="" key="false" length="0" name="PO_Creation_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="PO_Approval_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="GR_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Invoice_Request_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Request_Approval_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Doc_Parking_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Doc_Posting_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Payment_Run_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="PaymentRelease_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Invoice_Request_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Request_Approval_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Parking_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Posting_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Payment_Run_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PaymentRelease_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_Creation_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_IBS_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_Payment_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -900,12 +900,12 @@
         <mapperTableEntries expression="ToCalc.PR_APPROVAL!=null&amp;&amp;(ToCalc.PO_CREATION!=null||ToCalc.PO_APPROVAL!=null)?SLA_Calc.PO_Creation_Calc(=ToCalc.PR_APPROVAL,ToCalc.PO_CREATION,ToCalc.PO_APPROVAL,context.PH):null " name="PO_Creation_Day" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="ToCalc.PO_CREATION!=null)&amp;&amp;(ToCalc.PO_APPROVAL!=null||ToCalc.GR_DATE!=null)?SLA_Calc.PO_Approval_Calc(ToCalc.PO_CREATION,ToCalc.PO_APPROVAL,ToCalc.GR_DATE,context.PH):null " name="PO_Approval_Day" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="ToCalc.PO_APPROVAL!=null&amp;&amp;(ToCalc.GR_DATE!=null||ToCalc.INVOICESUBMISSIONT_DATE!=null)?SLA_Calc.GR_Calc(ToCalc.PO_APPROVAL,ToCalc.GR_DATE,ToCalc.INVOICESUBMISSIONT_DATE,context.PH):null " name="GR_Day" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="ToCalc.GR_DATE!=null&amp;&amp;(ToCalc.INVOICESUBMISSIONT_DATE!=null||ToCalc.APPROVAL_DATE!=null)?SLA_Calc.Invoice_Calc(ToCalc.GR_DATE,ToCalc.INVOICESUBMISSIONT_DATE,ToCalc.APPROVAL_DATE,context.PH):null " name="Invoice_Request_Hour" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Request_Approval_Hour" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Doc_Parking_Hour" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Doc_Posting_Hour" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Payment_Run_Hour" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PaymentRelease_Hour" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ToCalc.GR_DATE!=null&amp;&amp;(ToCalc.INVOICESUBMISSIONT_DATE!=null||ToCalc.APPROVAL_DATE!=null)?SLA_Calc.Invoice_Calc(ToCalc.GR_DATE,ToCalc.INVOICESUBMISSIONT_DATE,ToCalc.APPROVAL_DATE,context.PH):null " name="Invoice_Request_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Request_Approval_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Doc_Parking_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Doc_Posting_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="Payment_Run_Hour" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PaymentRelease_Hour" nullable="true" type="id_Double"/>
         <mapperTableEntries name="SLA_Exceed_Creation_Flag" nullable="true" type="id_String"/>
         <mapperTableEntries name="SLA_Exceed_IBS_Flag" nullable="true" type="id_String"/>
         <mapperTableEntries name="SLA_Exceed_Payment_Flag" nullable="true" type="id_String"/>
@@ -1026,12 +1026,12 @@
       <column comment="" key="false" length="0" name="PO_Creation_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="PO_Approval_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="GR_Day" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Invoice_Request_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Request_Approval_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Doc_Parking_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Doc_Posting_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Payment_Run_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="PaymentRelease_Hour" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Invoice_Request_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Request_Approval_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Parking_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Doc_Posting_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Payment_Run_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PaymentRelease_Hour" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_Creation_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_IBS_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="SLA_Exceed_Payment_Flag" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1297,13 +1297,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0dd438c7-0ca0-47f7-98bd-20f538d441bf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CK5vfLuV/35v1FTgmcJN2YL5YabjsvpBbeTtPSw0gHB8KmHYSrghJTPrryDWDG+0X4l5CFxvDohH&#13;
-JgVl9yRtvQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bc12305c-5282-4db7-aab9-b94cd70e47dd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kf48WY8VRbrA1mLGBHxWLsM6E8e48JBU1QOaK/J9d308vwWzZ414RS8l5VtIDzNRB8bTXtgM8fwC&#13;
-BBWZtjJ8mw==</DigestValue></Reference></SignedInfo><SignatureValue>jNolt47ysWo5Gs34PNGC/JB72Zo5lq7MwxN13SuEVT+xeS/cODkyMx2PYF1RJvSiCZwvfY4Wx2UI&#13;
-yL1utbJoMmCWVdxgNnZIskLHg7Hsm+4uMjvtIrY5QNRHo+wmjYihqrEB7lo2bED8BaISeRqrodlI&#13;
-OThdhevaloJnEkvOSVuxLcNPJ+PtB7oqrTpD3Hb/whDuJgBmGHLHdQOvfDmRRF6m8hNYiuBhJn7y&#13;
-sdq3tgAHWTBvppEBVK38tTvOM37WhENsf3xlaakuYEA4HsAxx43lg79eRqfds4vlB3aYmnk9mARL&#13;
-VjkkYV2SoDKHMFfnV1pLhaxdg8HMRPi5684ZOQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9cd46cc8-80a3-4180-9760-2a3373816993"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jnSeeOj0WD9fxzC9U5dia91vDcGPbORGPxkO4o5ejimWGO8iPbZUGttQmesoqQr/vVqiKF3atmZ/&#13;
+6VrNgsADSg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4eb2c599-6f6d-407f-9b71-3e4113b46206"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2ujdUEZp3Ybs5xv6DK04n65XJUE46U8fH/My6i4Q5vOQMS5PoPQxvHSJSj/+psUHmdwq5IEE0vre&#13;
+pZ9smdYYyw==</DigestValue></Reference></SignedInfo><SignatureValue>PWfzr8nJKD6jv3c9y7q0+i0mlhrcfpk4cS1hRGVq2T3vo25yfLmky68nfg2qQWpYh9+pandyg8C8&#13;
+mtCGZsnhNl3UZY36QRId3kAQ8T+lbJ5PomdfL6iX1AHpEResQxFsQL0iBvASMbHCj4RGvQpqQZs2&#13;
+yNf2r/jY6Dn/fMhXHV3FgVXk2FhJq8oKenItnceAjQnS++CoV6Bg/kMDeqKQVZyIvJ+uKyshaMQc&#13;
+fyAKfYMjqP2bwuMkLgyu2UC3jnce77xyny1WBqYyc9DiQGHWqnWDd02vdI/0ct/bh5M8P4Bh1Jwy&#13;
+N8WzeMrwdfzEGm2uvrwu+n2OH/e8hIgAeaZiqA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1325,4 +1325,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bc12305c-5282-4db7-aab9-b94cd70e47dd" Target="#_0dd438c7-0ca0-47f7-98bd-20f538d441bf"><Timestamp>2023-04-20 12:18:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4eb2c599-6f6d-407f-9b71-3e4113b46206" Target="#_9cd46cc8-80a3-4180-9760-2a3373816993"><Timestamp>2023-04-20 12:19:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
