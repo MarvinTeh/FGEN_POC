@@ -420,7 +420,11 @@
     "version" : "0.1",
     "type" : "job"
   },
-  "relatedItems" : [ ]
+  "relatedItems" : [ {
+    "id" : "_7EhR0NbEEe2jnPIM1QAqSQ - PROCUREMENT_TRANSACTIONS",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
 }, {
   "baseItem" : {
     "id" : "_k4QWgN3AEe2HeeCruyCLBg",
