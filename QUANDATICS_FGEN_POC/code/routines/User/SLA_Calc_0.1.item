@@ -33,12 +33,29 @@ public class SLA_Calc {
      * 
      * {example} helloExemple("world") # hello world !.
      */
-    public static void PR_Approval_Calc(Date PRCreation, Date PRApproval, Date POCreation, String Holidays) {
+    public static Double PR_Approval_Calc(Date PRCreation, Date PRApproval, Date POCreation, String Holidays) {
         Date Start= PRCreation;
         Date End= PRApproval==null?POCreation:PRApproval;
+        Double TotalSLA;
+        Date Start_day= TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",Start));
+        Date End_day=TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",End));
         
-        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",End)), TalendDate.parseDate("yyyy-MM-dd",TalendDate.formatDate("yyyy-MM-dd",Start)),"DD")));
+        Integer Counter=Integer.valueOf(String.valueOf(TalendDate.diffDate(Start_day,End_day,"DD")));
         System.out.println(Counter);
+        
+        for(int i=0;i<Counter;i++)
+		{
+        	if(i==Counter)
+        	{
+        		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End_day, Start_day,"HH")))/9);
+        	}
+        	else if(i==0)
+        	{
+        		//TotalSLA=TalendDate.diffDate(TalendDate.addDate(Start_day, 8, "HH"), Start);
+        	}
+		}
+        
+        return TotalSLA;
         
     }
 }
