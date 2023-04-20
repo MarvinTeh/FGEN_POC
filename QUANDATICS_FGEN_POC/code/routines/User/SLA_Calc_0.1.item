@@ -49,18 +49,22 @@ public class SLA_Calc {
         	if(i==Counter&&Counter==0)
         	{
         		TotalSLA=Double.valueOf(Integer.valueOf(String.valueOf(TalendDate.diffDate(End, Start,"HH"))));
+        		System.out.println(TotalSLA);
         	}
         	else if(i==0)
         	{
         		TotalSLA+=TalendDate.diffDate(TalendDate.addDate(Start_day, 17, "HH"), Start);
+        		System.out.println(TotalSLA);
         	}
         	else if(i==Counter)
         	{
         		TotalSLA+=TalendDate.diffDate(End, TalendDate.addDate(End_day, 8, "HH"));
+        		System.out.println(TotalSLA);
         	}
         	else
         	{
         		TotalSLA+=9.0;
+        		System.out.println(TotalSLA);
         	}
         	TalendDate.addDate(CurrDate, 1, "dd");
 		}
