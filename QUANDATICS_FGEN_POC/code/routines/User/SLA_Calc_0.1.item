@@ -69,7 +69,7 @@ public class SLA_Calc {
         		TotalSLA+=9.0;
         		System.out.println(TotalSLA);
         	}
-        	TalendDate.addDate(CurrDate, 1, "HH");
+        	CurrDate=TalendDate.addDate(CurrDate, 1, "HH");
 		}
         
         TotalSLA=TotalSLA/9.0;
