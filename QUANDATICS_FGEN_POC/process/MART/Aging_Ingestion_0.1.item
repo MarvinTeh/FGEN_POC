@@ -62,7 +62,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:2LcPSRpJCvzdY935rYGORlbPpcRod4VqJGygFBsF"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:0oL0rfjJX+xEtYWhe2U5AiPyTGHmRXfQt/H2Pl98"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -97,7 +97,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Q/2jEE6B0Z7B+JAQLXD4+mvGmhEKGZFy1iZIsxPz"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:HnxDi10WGOXTk0GaeJxTY/TT5/IvmFpz4KGELXJQ"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -372,9 +372,9 @@
       <column comment="" key="false" length="-1" name="PSTNGDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="S" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="DD" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AMOUNT_LOCAL_CURR" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AMOUNT_LOCAL_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="L_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AMOUNT_DOC_CURR" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AMOUNT_DOC_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="D_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="TEXT" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="REFERENCE" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -384,7 +384,7 @@
       <column comment="" key="false" length="-1" name="NET_DUE_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="BLINE_DATE" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="PAY_T" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="WITHHOLDING_TAX_AMOUNT" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WITHHOLDING_TAX_AMOUNT" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -400,9 +400,9 @@
         <mapperTableEntries expression="row1.PSTNGDATE " name="PSTNGDATE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.S " name="S" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.DD " name="DD" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.AMOUNT_LOCAL_CURR " name="AMOUNT_LOCAL_CURR" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.AMOUNT_LOCAL_CURR " name="AMOUNT_LOCAL_CURR" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.L_CURR " name="L_CURR" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.AMOUNT_DOC_CURR " name="AMOUNT_DOC_CURR" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.AMOUNT_DOC_CURR " name="AMOUNT_DOC_CURR" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.D_CURR " name="D_CURR" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.TEXT " name="TEXT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.REFERENCE " name="REFERENCE" nullable="true" type="id_String"/>
@@ -412,7 +412,7 @@
         <mapperTableEntries expression="row1.NET_DUE_DATE " name="NET_DUE_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.BLINE_DATE " name="BLINE_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.PAY_T " name="PAY_T" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.WITHHOLDING_TAX_AMOUNT " name="WITHHOLDING_TAX_AMOUNT" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.WITHHOLDING_TAX_AMOUNT " name="WITHHOLDING_TAX_AMOUNT" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="EMPT2" nullable="true" type="id_String"/>
@@ -573,9 +573,9 @@
       <column comment="" key="false" length="-1" name="PSTNGDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="S" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="DD" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AMOUNT_LOCAL_CURR" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AMOUNT_LOCAL_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="L_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AMOUNT_DOC_CURR" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AMOUNT_DOC_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="D_CURR" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="TEXT" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="REFERENCE" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -585,7 +585,7 @@
       <column comment="" key="false" length="-1" name="NET_DUE_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="BLINE_DATE" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="PAY_T" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="WITHHOLDING_TAX_AMOUNT" nullable="true" pattern="" precision="0" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WITHHOLDING_TAX_AMOUNT" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
@@ -593,7 +593,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:VTthJQ4khIkMzcp1EYUBtbwiulJdgwBosA41tUw2"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:CXVOTNXZ41nVm8vlCZBEkztMoAhsWsNpGtSjov3m"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="true"/>
     <elementParameter field="TABLE" name="SHEETLIST" show="false"/>
     <elementParameter field="TEXT" name="HEADER" value="10"/>
@@ -820,13 +820,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_81c1461b-d2a3-4e28-8515-b9d7ffd58bdf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EbgviqWkQI/QWVSyM8aYT5Qvt00N/oc3LA07IpQ+zDksoBy0WwQT+YrI7ayLg/ipayYh3cYeLRyg&#13;
-4/cSZXyDZg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e213c766-c4a4-42d4-bf3f-431c78fadac4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+I6moNsD6b+5kogKH/jlcOIOGFqTnzcyhUYA1cXqLnq9GdGUPpav4LCII0Yu1N4kFsALWtJ9P0Mo&#13;
-4aM1A/HvlA==</DigestValue></Reference></SignedInfo><SignatureValue>e3Eu8Lyn0E6mRPe8xYitIrbZOgj3UzxEqdIRV5RwSrschd9KGSIG6OaxHzpQwCcvZfSsBvkOFaRo&#13;
-esSm4MIGuSvUtM7gjuTq7tHAG4b7WqFKWuS2MoaVRCZQkKl/nDUwB5YIj35V+HWDd2U1ZYfRlWMt&#13;
-/8phubWSNaNdk2YOTom7HpD0UMwdzrNJJNS3qMILqr6czQmwWwUL00/k8o8jlV/EmSE7br2cp1aC&#13;
-v5NE2i5FawVfHD0hWckc9VEAyqDXIkVtSf6yMvtzUI1d73cJr/uLgXI4G5bq3xhgNEn/ymlaePXg&#13;
-p11W/rLu8Hw1y2YrBeGn3ThnGHeOT56eWt3kkQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_79c5109a-a84e-42d0-955b-5adfa376029b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w6FAa90Zaafu7DuZEulg56K0ydrmc2cGQLUH6zthmw3K+CPDk2lRc1layiUOmbuEcPGC9ceG3JXV&#13;
+91FfD4yHmA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cbe88ad3-3489-4ee9-b607-ae11a34ee114"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>po0bDO41le8Vy7m6d4TRN8kVylAatTXngvuRgX4KIZMgY6MdUVKt7L+FckCXSR1z22aJ1rKpAbJ5&#13;
+BZOTQiS7dA==</DigestValue></Reference></SignedInfo><SignatureValue>I7wTkNjdFp495I20UQcSVICduX4oN0Zbq0VJ0TyLd7cTg8D4tY8NfiiHGWbXi3XhV/t5yc5qtt7V&#13;
+/S4nZikjDQqMNMOJBPL/4l8PHGIEC4sCI3bchY8Wr4+E59jlSGIBiqxmHV7a1X5jea3E6WsffxcR&#13;
+E/7DJB8aZJ20ojbS4zASlkDLD0cqJpco2GrT6b9EOLBsXJTnsqwh6Cf1niXeyn79T+m6tscjXmEb&#13;
+k6RG04j4p9UI5iay1tBH8+VxVWa3rUdOfi0UUupQSHQ96FUHVMbraPa1Ll+X9wrMOQ4VbjzKAYX6&#13;
+yvxOxci1pVQOgFxvVrK16dANmDhgJkimkRKJMA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -848,4 +848,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e213c766-c4a4-42d4-bf3f-431c78fadac4" Target="#_81c1461b-d2a3-4e28-8515-b9d7ffd58bdf"><Timestamp>2023-04-21 09:24:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cbe88ad3-3489-4ee9-b607-ae11a34ee114" Target="#_79c5109a-a84e-42d0-955b-5adfa376029b"><Timestamp>2023-04-21 09:25:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
