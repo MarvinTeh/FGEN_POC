@@ -225,7 +225,7 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_1r4c4NzdEe24L7dTAqU3HQ - PurchaseOrder",
+    "id" : "_1r4c4NzdEe24L7dTAqU3HQ - SAP_PURCHASE_ORDER",
     "version" : "Latest",
     "type" : "schema"
   } ]
